@@ -1,0 +1,37 @@
+@media (prefers-color-scheme: light) { /*Light mode*/
+    body {
+        padding-bottom: 3rem;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    /* Dark mode */
+    input[type=text], input[type=email], textarea {
+        width: 200px;
+        background: black;
+        color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    input[type=text]:focus, input[type=email]:focus, textarea:focus {
+        width: 100%;
+        background: black;
+        color: white;
+    }
+
+    label {
+        color: gray;
+    }
+
+    a, H1, H2, H3, H4, p, li {
+        color: white;
+    }
+
+    #id_title, #id_file {
+        color: black;
+    }
+
+    body {
+        background-color: black;
+        padding-bottom: 3rem;
+    }
+}

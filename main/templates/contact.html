@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Jan Přikryl"/>
+      <meta name="keywords" content="Jan Přikryl">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kontaktujte mně</title>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    {% load static %}
+      <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'style_old.css' %}" type="text/css" />
+      <link rel="stylesheet" href="{% static 'hover.css' %}" type="text/css">
+
+  </head>
+  <body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+      <a href="/" class="align-items-center me-md-auto text-dark text-decoration-none">
+        <div class="row">
+            <div class="col-sm-4" style="padding-right: 40px;">
+                <img src="media/profile.png" style="padding: 2px;">
+            </div>
+            <div class="col-sm-8" style="line-height: 5pt;">
+                <p style="font-size: 10px;">Hello, I am</p>
+                <H4>Jan</H4>
+            </div>
+        </div>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link active" aria-current="page">Portfolio</a></li>
+        <li class="nav-item"><a href="{% url 'index' %}#about" class="nav-link">O mně</a></li>
+        <li class="nav-item"><a href="{% url 'index' %}#skills" class="nav-link">Dovednosti</a></li>
+        <li class="nav-item"><a href="{% url 'index' %}#projects" class="nav-link">Projekty</a></li>
+        <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Kontakt</a></li>
+      </ul>
+    </header>
+  </div>
+
+  <div class="container" style="">
+      <div class="row">
+          <div class="col-sm-2" style="margin-top: 10px;">
+                  <div class="col-sm-2 cards" style="padding-bottom: 10px;">
+                      <a href=""><img src="media/icon/013-mail.svg"></a>
+                  </div>
+                  <div class="col-sm-2 cards" style="padding-bottom: 10px;">
+                      <a href=""><img src="media/icon/029-chat.svg"></a>
+                  </div>
+                  <div class="col-sm-2 cards" style="padding-bottom: 10px;">
+                      <a href=""><img src="media/icon/icons8-github.svg"></a>
+                  </div>
+                  <div class="col-sm-2 cards" style="padding-bottom: 10px;">
+                      <a href=""><img src="media/icon/1482589369.svg"></a>
+                  </div>
+                  <div class="col-sm-2 cards" style="padding-bottom: 10px;">
+                      <a href=""><img src="media/icon/instagram.svg"></a>
+                  </div>
+                  <div class="col-sm-2 cards" style="padding-bottom: 10px;">
+                      <a href=""><img src="media/icon/1652445661linkedin-social-media-svgrepo-com.svg"></a>
+                  </div>
+
+          </div>
+          <div class="col-sm-8">
+              <H1>Zanechte mi vzkaz</H1>
+              <form id="message_form">
+              <div class="row">
+                  <div class="col-sm-5">
+                    <p style="font-size: 30px;">Moje jméno je</p>
+                  </div>
+                  <div class="form-floating mb-2 col-sm" style="width: 200px;">
+                    <input type="text" class="form-control rounded-3" id="name" placeholder="Jméno" style="margin-left: -10px;">
+                    <label for="name">Jméno</label>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-5">
+                    <p style="font-size: 30px;">Můj email je:</p>
+                              <p>Email slouží k případné komunikaci</p>
+                  </div>
+                <div class="form-floating mb-2 col-sm" style="width: 200px;">
+                  <input type="email" class="form-control rounded-3" id="email" placeholder="Email" style="margin-left: -10px;">
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-5">
+                    <p style="font-size: 30px;">Předmětem zprávy je:</p>
+                  </div>
+                <div class="form-floating mb-2 col-sm" style="width: 200px;">
+                  <input type="text" class="form-control rounded-3" id="subject" placeholder="Jméno" style="margin-left: -10px;" maxlength="20">
+                  <label for="subject">Předmět</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-5">
+                    <p style="font-size: 30px;">Zpráva</p>
+                  </div>
+                <div class="form-floating mb-2 col-sm" style="width: 200px;">
+                  <textarea id="message" style="margin-left: -10px; border-radius: 10px;"></textarea>
+                </div>
+              </div>
+              <input type="submit" class="btn btn-outline-danger" value="Odeslat">
+            </form>
+          </div>
+      </div>
+  </div>
+
+  <script>
+      $(document).ready(function (event) {
+          $('#message_form').on('submit', function (event) {
+          event.preventDefault();
+          $.ajax({
+           type:'POST',
+           url:'{% url 'save_message' %}',
+           data:{
+               'name':$("#name").val(),
+               'email':$('#email').val(),
+               'subject': $('#subject').val(),
+               'message': $('#message').val(),
+               'csrfmiddlewaretoken':'{{ csrf_token }}'
+           },
+           success: function (data) {
+                Init_Modal.show();
+                $("#name").val("");
+                $('#email').val("");
+                $('#subject').val("");
+                $('#message').val("");
+           },
+           error: function (edata) {
+               alert("Chyba v odesílání, zkontrolujte internetové připojení.");
+           }
+       })
+    });
+  });
+  </script>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalInitial">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-body p-5">
+        <h2 class="fw-bold mb-0" style="color: black;">Odesláno</h2>
+
+        <ul class="d-grid gap-4 my-5 list-unstyled">
+          <li class="d-flex gap-4">
+            <div style="color: black;">
+              <h5 class="mb-0" style="color: black;">Děkuji</h5>
+              Zpráva byla odeslána.
+            </div>
+          </li>
+          <li class="d-flex gap-4">
+            <div style="color: black;">
+              <h5 class="mb-0" style="color: black;">Těším se na komunikaci s vámí</h5>
+              Určitě odpovím co nejdříve.
+            </div>
+
+        </ul>
+        <button type="button" class="btn btn-lg btn-primary mt-5 w-100" data-bs-dismiss="modal">Dobře, zavřít</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>var Init_Modal = new bootstrap.Modal(document.getElementById('modalInitial'));</script>
+</body>
+</html>

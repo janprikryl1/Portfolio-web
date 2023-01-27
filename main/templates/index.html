@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Jan Přikryl"/>
+      <meta name="keywords" content="Jan Přikryl">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jan Přikryl</title>
+
+
+    {% load static %}
+      <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'style_old.css' %}" type="text/css" />
+      <link rel="stylesheet" href="{% static 'hover.css' %}" type="text/css">
+
+
+  </head>
+  <body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+            <a href="/" class="align-items-center me-md-auto text-dark text-decoration-none">
+        <div class="row">
+            <div class="col-sm-4" style="padding-right: 40px;">
+                <img src="media/profile.png" style="padding: 2px;">
+            </div>
+            <div class="col-sm-8" style="line-height: 5pt;">
+                <p style="font-size: 10px;">Hello, I am</p>
+                <H4>Jan</H4>
+            </div>
+        </div>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link active" aria-current="page">Portfolio</a></li>
+        <li class="nav-item"><a href="{% url 'index' %}#about" class="nav-link">O mně</a></li>
+        <li class="nav-item"><a href="{% url 'index' %}#skills" class="nav-link">Dovednosti</a></li>
+        <li class="nav-item"><a href="{% url 'index' %}#projects" class="nav-link">Projekty</a></li>
+        <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Kontakt</a></li>
+      </ul>
+    </header>
+  </div>
+  <div class="container" id="overview">
+      <div class="row" style="margin: 30px; padding-top: 5%;">
+          <div class="col-sm-8">
+              <H1>Ahoj,</H1>
+              <H1>Já jsem Jan Přikryl</H1>
+              <a href="{% url 'contact' %}" class="btn btn-outline-success" style="margin-top: 40px;">Napište mi</a>
+              <div class="row" style="bottom: 0; height: 10%;  position: absolute;">
+                  <div class="col-sm-2 cards">
+                      <a href=""><img src="media/icon/013-mail.svg"></a>
+                  </div>
+                  <div class="col-sm-2 cards">
+                      <a href=""><img src="media/icon/029-chat.svg"></a>
+                  </div>
+                  <div class="col-sm-2 cards">
+                      <a href=""><img src="media/icon/icons8-github.svg"></a>
+                  </div>
+                  <div class="col-sm-2 cards">
+                      <a href=""><img src="media/icon/1482589369.svg"></a>
+                  </div>
+                  <div class="col-sm-2 cards">
+                      <a href=""><img src="media/icon/instagram.svg"></a>
+                  </div>
+                  <div class="col-sm-2 cards">
+                      <a href=""><img src="media/icon/1652445661linkedin-social-media-svgrepo-com.svg"></a>
+                  </div>
+
+              </div>
+          </div>
+          <div class="col-sm-4">
+              <img src="media/icon/IMG_20210522_162420.jpg" style="width: 200px;">
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <!--About-->
+      <div class="row" style="bottom: 0; height: 0px; position: absolute; margin-left: 30px; margin-top: 150px;">
+          <div class="col-sm-16" id="about" style="background: gray;">
+              <H1>Jmenuji se Jan Přikryl</H1>
+              <H2>Jsem ...</H2>
+
+            <h3>Student &amp; Programátor</h3>
+                <ul>
+                  <li><i class=""></i> <strong>Datum narození:</strong> 9 Listopadu 2002</li>
+                  <li><i class=""></i> <strong>Telefon:</strong> +420 738 838 972</li>
+                  <li><i class=""></i> <strong>Stát:</strong> Česká republika</li>
+                </ul>
+                <ul>
+                  <li><i class=""></i> <strong>Škola:</strong> SPŠE OL</li>
+                  <li><i class=""></i> <strong>Náboženské vyznání:</strong> Křesťanství</li>
+                </ul>
+
+            <p>
+            Jsem  ...
+            </p>
+
+
+    </section>
+
+           <div class="col-sm-16" id="programming">
+              <H1>xxx</H1>
+          </div>
+
+    <div class="col-sm-16" id="skills">
+        <H1>Dovedosti</H1>
+    </div>
+     <div class="col-sm-16" id="projects">
+         <H1></H1>
+     </div>
+  </div>
+
+
+  </div>
+</body>
+</html>

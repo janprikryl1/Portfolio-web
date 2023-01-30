@@ -3,27 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Jan Přikryl"/>
-      <meta name="keywords" content="Jan Přikryl">
+    <meta name="keywords" content="Jan Přikryl">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jan Přikryl</title>
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     {% load static %}
-      <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
-
+    <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'style_old.css' %}" type="text/css" />
-      <link rel="stylesheet" href="{% static 'hover.css' %}" type="text/css">
-
-
-  </head>
-  <body>
+    <link rel="stylesheet" href="{% static 'hover.css' %}" type="text/css">
+</head>
+<body>
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-4">
-            <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none">
-                <H4>Jan</H4>
-            </a>
-
+      <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none">
+        <H4>Jan</H4>
+      </a>
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="{% url 'index' %}" class="nav-link active">Portfolio</a></li>
         <li class="nav-item"><a href="{% url 'index' %}#about" class="nav-link">O mně</a></li>
@@ -43,25 +38,25 @@
               <a href="{% url 'contact' %}" class="btn btn-outline-primary" style="margin-top: 40px;" id="contact">Napište mi</a>
               <div class="row" style="bottom: 0; height: 10%; position: absolute;" id="socials">
                       <div class="col-sm-1 cards" style="margin-right: 20px;">
-                          <a href=""><img src="media/icon/013-mail.svg"></a>
+                          <a href="mailto:honza.prikryl.hp@gmail.com"><img src="media/icon/013-mail.svg"></a>
                       </div>
                       <div class="col-sm-1 cards" style="margin-right: 20px;">
-                          <a href=""><img src="media/icon/029-chat.svg"></a>
+                          <a href="tel:+420738838972"><img src="media/icon/029-chat.svg"></a>
                       </div>
                       <div class="col-sm-1 cards" style="margin-right: 20px;">
-                          <a href=""><img src="media/icon/icons8-github.svg"></a>
+                          <a href="https://github.com/janprikryl1"><img src="media/icon/icons8-github.svg"></a>
                       </div>
                       <div class="col-sm-1 cards" style="margin-right: 20px;">
-                          <a href=""><img src="media/icon/1482589369.svg"></a>
+                          <a href="https://www.facebook.com/jan.prikryl.73/"><img src="media/icon/1482589369.svg"></a>
                       </div>
                       <div class="col-sm-1 cards" style="margin-right: 20px;">
-                          <a href=""><img src="media/icon/instagram.svg"></a>
+                          <a href="https://www.instagram.com/honzaprikryl1/"><img src="media/icon/instagram.svg"></a>
                       </div>
                       <div class="col-sm-1 cards" style="margin-right: 20px;">
-                          <a href=""><img src="media/icon/youtube.svg"></a>
+                          <a href="https://www.youtube.com/channel/UCaBbMsxuzoJ7UjRtAoAcWdg"><img src="media/icon/youtube.svg"></a>
                       </div>
                       <div class="col-sm-1 cards" style="margin-right: 20px;">
-                          <a href=""><img src="media/icon/1652445661linkedin-social-media-svgrepo-com.svg"></a>
+                          <a href="https://www.linkedin.com/in/jan-přikryl-ba07b3207/"><img src="media/icon/1652445661linkedin-social-media-svgrepo-com.svg"></a>
                       </div>
               </div>
           </div>
@@ -71,19 +66,6 @@
       </div>
   </div>
   <br>
-  <script>
-      function on_resize() {
-          if ($(this).width() < 575) {
-            $('.cards').hide();
-          } else {
-            $('.cards').show();
-          }
-      }
-      on_resize();
-      $(window).resize(function() {
-          on_resize();
-        });
-  </script>
   <div class="container">
       <!--About-->
       <div class="row" style="bottom: 0; height: 0px; position: absolute; margin-left: 30px; margin-top: 100px;">
@@ -91,7 +73,6 @@
               <H1>Vítám tě na svém webu,</H1>
                 <br>
               <h3>Jsem student, programátor a rád se učím novým věcem.</h3>
-              <p>Začal jsem se zajímat o programování v</p>
             <hr class="featurette-divider">
             <H1 style="margin-top: 50px; margin-bottom: 20px; color: #ff0000">Vzdělání  <img id="education_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#education_content').is(':hidden')){$('#education_content').hide('slow');$('#education_arrow').removeClass('rotated');}else{$('#education_content').show('slow');$('#education_arrow').addClass('rotated');}"></H1>
               <div id="education_content" style="display: none;">
@@ -105,7 +86,6 @@
                       <div class="col-sm-4" style="text-align: center;">
                         <p>2022 - současnost</p>
                       </div>
-
                       <div class="col-sm-5">
                         <H6 style="color: #33ff00">VYŠŠÍ ODBORNÁ ŠKOLA</H6>
                         <H6 style="color: #33ff00">A STŘENÍ PRŮMYSLOVÁ ŠKOLA</H6>
@@ -137,7 +117,6 @@
                       <div class="col-sm-4" style="text-align: center;">
                         <p>2022 - současnost</p>
                       </div>
-
                       <div class="col-sm-5">
                       <H6 style="color: #33ff00">OBEC SMRŽICE</H6>
                           <H7>Smržice</H7>
@@ -149,9 +128,6 @@
                       <div class="col-sm-4" style="text-align: center;">
                         <p>2019, 2020, 2021, 2022</p>
                       </div>
-
-
-
                  </div>
                 <div class="row">
                     <div class="col-sm-5">
@@ -170,7 +146,6 @@
     <hr class="featurette-divider">
 <div class="col-sm-16" id="skills" style="margin-top: 50px; margin-bottom: 20px;">
     <H1 style="color: #ff0000;">Dovedosti <img id="skills_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#skills_content').is(':hidden')){$('#skills_content').hide('slow');$('#skills_arrow').removeClass('rotated');}else{$('#skills_content').show('slow');$('#skills_arrow').addClass('rotated');}"></H1>
-
     <div id="skills_content" style="display: none;">
     <p>Jazyky, knihovny, technologie, ostatní</p>
     <div class="container">
@@ -184,8 +159,6 @@
               <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-others" role="tab" aria-controls="settings">Ostatní</a>
             </div>
           </div>
-
-
           <div class="col-sm-8" style="width: 70%;">
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="list-python" role="tabpanel" aria-labelledby="list-home-list">
@@ -219,19 +192,14 @@
                   </div>
             </div>
           </div>
-            </div>
         </div>
-</div>
-
-
-    </div>
+       </div>
       </div>
+     </div>
+    </div>
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
         <script>
             const fotka = document.querySelector('#photo');
             const kontakt = document.querySelector('#contact');
@@ -247,11 +215,21 @@
             .fromTo(fotka, 1, {opacity:0, y:"200"}, {opacity:1, y:"0", ease:Power2.easeInOut})
             .fromTo(socials, 1, {opacity:0, y:"200"}, {opacity:1, y:"0", ease:Power2.easeInOut});
 
-
             $('#list-tab a').on('click', function (e) {
                 e.preventDefault();
                 $(this).tab('show');
-            })
+            });
+            function on_resize() {
+                if ($(this).width() < 575) {
+                    $('.cards').hide();
+                } else {
+                    $('.cards').show();
+                }
+            }
+            on_resize();
+            $(window).resize(function() {
+                on_resize();
+            });
   </script>
 </body>
 </html>

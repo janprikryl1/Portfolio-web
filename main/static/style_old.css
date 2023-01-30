@@ -22,7 +22,7 @@
         color: gray;
     }
 
-    a, H1, H2, H3, H4, p, li {
+    a, H1, H2, H3, H4, H5, H6, H7, p, li {
         color: white;
     }
 
@@ -34,4 +34,29 @@
         background-color: black;
         padding-bottom: 3rem;
     }
+    .list-group-item {
+        background-color: black;
+        color: white;
+    }
+    .tab-pane {
+        color: white;
+    }
+    .featurette-divider {
+        color: white;
+        width: 75%;
+    }
+}
+
+
+.arrow:hover {
+    transform: scale(1.5) rotate(0deg);
+
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+.rotated:hover {
+    transform: rotate(180deg) scale(1.5);
 }

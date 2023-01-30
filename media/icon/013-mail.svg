@@ -7,7 +7,7 @@
    data-name="Layer 1"
    version="1.1"
    sodipodi:docname="013-mail.svg"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -25,9 +25,9 @@
      showgrid="false"
      inkscape:zoom="1.6445312"
      inkscape:cx="232.58908"
-     inkscape:cy="231.981"
+     inkscape:cy="280.62709"
      inkscape:window-width="1920"
-     inkscape:window-height="1027"
+     inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -37,5 +37,5 @@
      fill-rule="evenodd"
      id="path2"
      sodipodi:nodetypes="sssssccccccccccccccccccccccc"
-     style="fill:#202124;fill-opacity:1" />
+     style="fill:#999999;fill-opacity:1" />
 </svg>

@@ -19,7 +19,7 @@ def save_message(request):
     return HttpResponse()
 
 def projects(request):
-    return render(request, "projects.html", {"projects":Project.objects.all()})
+    return render(request, "projects.html", {"webs":Project.objects.filter(category="web").reverse(), "apps":Project.objects.filter(category="application").reverse(), "others":Project.objects.all().exclude(category="web").exclude(category="application").reverse()})
 
 def project_details(request):
     project = Project.objects.get(id=int(request.GET['project_id']))

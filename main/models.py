@@ -17,8 +17,6 @@ class Message(models.Model):
 categories = (
     ("w", "web"),
     ("a", "application"),
-    ("g", "game"),
-    ("m", "micro controller"),
     ("e", "else")
 )
 
@@ -34,6 +32,7 @@ class Project(models.Model):
     description = models.TextField()
     purpose = models.TextField()
     screenshots = models.ManyToManyField(Screenshot)
+    icon = models.ImageField(upload_to="project_icons/")
     repository = models.CharField(max_length=100)
     date_time = models.DateTimeField(auto_now=True)
 

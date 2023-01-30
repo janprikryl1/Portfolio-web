@@ -7,7 +7,7 @@
    version="1.1"
    id="svg4"
    sodipodi:docname="icons8-github.svg"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,12 +23,12 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.82226562"
-     inkscape:cx="465.17815"
-     inkscape:cy="512.60808"
-     inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     inkscape:window-x="-8"
+     inkscape:zoom="0.41113281"
+     inkscape:cx="492.54157"
+     inkscape:cy="504.70309"
+     inkscape:window-width="1280"
+     inkscape:window-height="729"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4" />
@@ -39,5 +39,5 @@
      transform="scale(64)"
      fill="#1B1F23"
      id="path2"
-     style="fill:#202124;fill-opacity:1" />
+     style="fill:#999999;fill-opacity:1" />
 </svg>

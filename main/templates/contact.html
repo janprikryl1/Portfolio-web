@@ -19,26 +19,19 @@
   <body>
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-      <a href="/" class="align-items-center me-md-auto text-dark text-decoration-none">
-        <div class="row">
-            <div class="col-sm-4" style="padding-right: 40px;">
-                <img src="media/profile.png" style="padding: 2px;">
-            </div>
-            <div class="col-sm-8" style="line-height: 5pt;">
-                <p style="font-size: 10px;">Hello, I am</p>
+       <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none">
                 <H4>Jan</H4>
-            </div>
-        </div>
-      </a>
+            </a>
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link active" aria-current="page">Portfolio</a></li>
+        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link" aria-current="page">Portfolio</a></li>
         <li class="nav-item"><a href="{% url 'index' %}#about" class="nav-link">O mně</a></li>
         <li class="nav-item"><a href="{% url 'index' %}#skills" class="nav-link">Dovednosti</a></li>
-        <li class="nav-item"><a href="{% url 'index' %}#projects" class="nav-link">Projekty</a></li>
-        <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Kontakt</a></li>
+        <li class="nav-item"><a href="{% url 'projects' %}" class="nav-link">Projekty</a></li>
+        <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link active">Kontakt</a></li>
       </ul>
     </header>
+      <hr style="margin-top: 1px; color: gray;">
   </div>
 
   <div class="container" style="">
@@ -60,6 +53,9 @@
                       <a href=""><img src="media/icon/instagram.svg"></a>
                   </div>
                   <div class="col-sm-2 cards" style="padding-bottom: 10px;">
+                      <a href=""><img src="media/icon/youtube.svg"></a>
+                  </div>
+                  <div class="col-sm-2 cards" style="padding-bottom: 10px;">
                       <a href=""><img src="media/icon/1652445661linkedin-social-media-svgrepo-com.svg"></a>
                   </div>
 
@@ -72,7 +68,7 @@
                     <p style="font-size: 30px;">Moje jméno je</p>
                   </div>
                   <div class="form-floating mb-2 col-sm" style="width: 200px;">
-                    <input type="text" class="form-control rounded-3" id="name" placeholder="Jméno" style="margin-left: -10px;">
+                    <input type="text" class="form-control rounded-3" id="name" placeholder="Jméno" style="margin-left: -10px;" required>
                     <label for="name">Jméno</label>
                   </div>
               </div>
@@ -82,7 +78,7 @@
                               <p>Email slouží k případné komunikaci</p>
                   </div>
                 <div class="form-floating mb-2 col-sm" style="width: 200px;">
-                  <input type="email" class="form-control rounded-3" id="email" placeholder="Email" style="margin-left: -10px;">
+                  <input type="email" class="form-control rounded-3" id="email" placeholder="Email" style="margin-left: -10px;" required>
                   <label for="email">Email</label>
                 </div>
               </div>
@@ -91,7 +87,7 @@
                     <p style="font-size: 30px;">Předmětem zprávy je:</p>
                   </div>
                 <div class="form-floating mb-2 col-sm" style="width: 200px;">
-                  <input type="text" class="form-control rounded-3" id="subject" placeholder="Jméno" style="margin-left: -10px;" maxlength="20">
+                  <input type="text" class="form-control rounded-3" id="subject" placeholder="Jméno" style="margin-left: -10px;" maxlength="20" required>
                   <label for="subject">Předmět</label>
                 </div>
               </div>
@@ -100,12 +96,21 @@
                     <p style="font-size: 30px;">Zpráva</p>
                   </div>
                 <div class="form-floating mb-2 col-sm" style="width: 200px;">
-                  <textarea id="message" style="margin-left: -10px; border-radius: 10px;"></textarea>
+                  <textarea id="message" style="margin-left: -10px; border-radius: 10px; padding: 10px;" required></textarea>
                 </div>
               </div>
               <input type="submit" class="btn btn-outline-danger" value="Odeslat">
+
+              <div class="col-sm-8">
+                <br><br>
+                <p>Můžete mně také kontaktovat e-mailem, telefonicky, přes Signal, WhatsApp, Telegram, Viber, Messenger, Instagram, FaceTime a nebo Discord</p>
+                <a href="tel:+420738838972" style="text-decoration: none;"><strong>Telefon:</strong> +420 738 838 972</a>
+                <br>
+                <a href="mailto:honza.prikryl.hp@gmail.com" style="text-decoration: none;"><strong>E-mail:</strong> honza.prikryl.hp@gmail.com</a>
+              </div>
             </form>
           </div>
+
       </div>
   </div>
 
@@ -164,5 +169,10 @@
   </div>
 </div>
   <script>var Init_Modal = new bootstrap.Modal(document.getElementById('modalInitial'));</script>
+
+    <footer class="container" style="margin-top: 60px;">
+    <p class="float-end"><a href="#">Nahoru</a></p>
+    <p>Jan Přikryl, 2023</p>
+  </footer>
 </body>
 </html>

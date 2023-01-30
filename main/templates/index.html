@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jan Přikryl</title>
 
-
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     {% load static %}
       <link href="{% static 'assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
 
@@ -18,99 +19,239 @@
   </head>
   <body>
   <div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-            <a href="/" class="align-items-center me-md-auto text-dark text-decoration-none">
-        <div class="row">
-            <div class="col-sm-4" style="padding-right: 40px;">
-                <img src="media/profile.png" style="padding: 2px;">
-            </div>
-            <div class="col-sm-8" style="line-height: 5pt;">
-                <p style="font-size: 10px;">Hello, I am</p>
+    <header class="d-flex flex-wrap justify-content-center py-4">
+            <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none">
                 <H4>Jan</H4>
-            </div>
-        </div>
-      </a>
+            </a>
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link active" aria-current="page">Portfolio</a></li>
+        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link active">Portfolio</a></li>
         <li class="nav-item"><a href="{% url 'index' %}#about" class="nav-link">O mně</a></li>
         <li class="nav-item"><a href="{% url 'index' %}#skills" class="nav-link">Dovednosti</a></li>
-        <li class="nav-item"><a href="{% url 'index' %}#projects" class="nav-link">Projekty</a></li>
+        <li class="nav-item"><a href="{% url 'projects' %}" class="nav-link">Projekty</a></li>
         <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Kontakt</a></li>
       </ul>
     </header>
+            <hr style="margin-top: 1px; color: gray;">
   </div>
-  <div class="container" id="overview">
-      <div class="row" style="margin: 30px; padding-top: 5%;">
-          <div class="col-sm-8">
-              <H1>Ahoj,</H1>
-              <H1>Já jsem Jan Přikryl</H1>
-              <a href="{% url 'contact' %}" class="btn btn-outline-success" style="margin-top: 40px;">Napište mi</a>
-              <div class="row" style="bottom: 0; height: 10%;  position: absolute;">
-                  <div class="col-sm-2 cards">
-                      <a href=""><img src="media/icon/013-mail.svg"></a>
-                  </div>
-                  <div class="col-sm-2 cards">
-                      <a href=""><img src="media/icon/029-chat.svg"></a>
-                  </div>
-                  <div class="col-sm-2 cards">
-                      <a href=""><img src="media/icon/icons8-github.svg"></a>
-                  </div>
-                  <div class="col-sm-2 cards">
-                      <a href=""><img src="media/icon/1482589369.svg"></a>
-                  </div>
-                  <div class="col-sm-2 cards">
-                      <a href=""><img src="media/icon/instagram.svg"></a>
-                  </div>
-                  <div class="col-sm-2 cards">
-                      <a href=""><img src="media/icon/1652445661linkedin-social-media-svgrepo-com.svg"></a>
-                  </div>
 
+  <div class="container" id="overview">
+      <div class="row" style="margin: 30px; padding-top: 5px;">
+          <div class="col-sm-8">
+              <H1 style="color: #ff0000;" id="title">Ahoj,</H1>
+              <H1 id="welcome">Jmenuji se Jan Přikryl</H1>
+              <a href="{% url 'contact' %}" class="btn btn-outline-primary" style="margin-top: 40px;" id="contact">Napište mi</a>
+              <div class="row" style="bottom: 0; height: 10%; position: absolute;" id="socials">
+                      <div class="col-sm-1 cards" style="margin-right: 20px;">
+                          <a href=""><img src="media/icon/013-mail.svg"></a>
+                      </div>
+                      <div class="col-sm-1 cards" style="margin-right: 20px;">
+                          <a href=""><img src="media/icon/029-chat.svg"></a>
+                      </div>
+                      <div class="col-sm-1 cards" style="margin-right: 20px;">
+                          <a href=""><img src="media/icon/icons8-github.svg"></a>
+                      </div>
+                      <div class="col-sm-1 cards" style="margin-right: 20px;">
+                          <a href=""><img src="media/icon/1482589369.svg"></a>
+                      </div>
+                      <div class="col-sm-1 cards" style="margin-right: 20px;">
+                          <a href=""><img src="media/icon/instagram.svg"></a>
+                      </div>
+                      <div class="col-sm-1 cards" style="margin-right: 20px;">
+                          <a href=""><img src="media/icon/youtube.svg"></a>
+                      </div>
+                      <div class="col-sm-1 cards" style="margin-right: 20px;">
+                          <a href=""><img src="media/icon/1652445661linkedin-social-media-svgrepo-com.svg"></a>
+                      </div>
               </div>
           </div>
           <div class="col-sm-4">
-              <img src="media/icon/IMG_20210522_162420.jpg" style="width: 200px;">
+              <img id="photo" src="media/icon/IMG_20210522_162420.jpg" style="width: 300px; padding-top: 20px;">
           </div>
       </div>
   </div>
+  <br>
+  <script>
+      function on_resize() {
+          if ($(this).width() < 575) {
+            $('.cards').hide();
+          } else {
+            $('.cards').show();
+          }
+      }
+      on_resize();
+      $(window).resize(function() {
+          on_resize();
+        });
+  </script>
   <div class="container">
       <!--About-->
-      <div class="row" style="bottom: 0; height: 0px; position: absolute; margin-left: 30px; margin-top: 150px;">
-          <div class="col-sm-16" id="about" style="background: gray;">
-              <H1>Jmenuji se Jan Přikryl</H1>
-              <H2>Jsem ...</H2>
+      <div class="row" style="bottom: 0; height: 0px; position: absolute; margin-left: 30px; margin-top: 100px;">
+          <div class="col-sm-16" id="about">
+              <H1>Vítám tě na svém webu,</H1>
+                <br>
+              <h3>Jsem student, programátor a rád se učím novým věcem.</h3>
+              <p>Začal jsem se zajímat o programování v</p>
+            <hr class="featurette-divider">
+            <H1 style="margin-top: 50px; margin-bottom: 20px; color: #ff0000">Vzdělání  <img id="education_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#education_content').is(':hidden')){$('#education_content').hide('slow');$('#education_arrow').removeClass('rotated');}else{$('#education_content').show('slow');$('#education_arrow').addClass('rotated');}"></H1>
+              <div id="education_content" style="display: none;">
+                    <div class="row">
+                      <div class="col-sm-5">
+                          <H6 style="color: #33ff00">VYSOKÁ ŠKOLA BÁŇSKÁ -</H6>
+                          <H6 style="color: #33ff00">TECHNICKÁ UNIVERZITA OSTRAVA</H6>
+                          <H7>Ostrava</H7>
+                          <p style="color: #0073ff;">Informatika</p>
+                      </div>
+                      <div class="col-sm-4" style="text-align: center;">
+                        <p>2022 - současnost</p>
+                      </div>
 
-            <h3>Student &amp; Programátor</h3>
-                <ul>
-                  <li><i class=""></i> <strong>Datum narození:</strong> 9 Listopadu 2002</li>
-                  <li><i class=""></i> <strong>Telefon:</strong> +420 738 838 972</li>
-                  <li><i class=""></i> <strong>Stát:</strong> Česká republika</li>
-                </ul>
-                <ul>
-                  <li><i class=""></i> <strong>Škola:</strong> SPŠE OL</li>
-                  <li><i class=""></i> <strong>Náboženské vyznání:</strong> Křesťanství</li>
-                </ul>
+                      <div class="col-sm-5">
+                        <H6 style="color: #33ff00">VYŠŠÍ ODBORNÁ ŠKOLA</H6>
+                        <H6 style="color: #33ff00">A STŘENÍ PRŮMYSLOVÁ ŠKOLA</H6>
+                        <H6 style="color: #33ff00">ELEKTROTECHNICKÁ</H6>
+                        <H7>Olomouc</H7>
+                        <p style="color: #0073ff;">Elektrotechnika</p>
+                      </div>
+                      <div class="col-sm-4" style="text-align: center;">
+                        <p>2018 - 2022</p>
+                      </div>
+                    </div>
+                        <H6 style="color: #33ff00">ZÁKLADNÍ ŠKOLA E. VALENY</H6>
+                        <H7>Prostějov</H7>
+                </div>
 
-            <p>
-            Jsem  ...
-            </p>
+    <hr class="featurette-divider">
+            <H1 style="margin-top: 50px; margin-bottom: 20px; color: #ff0000">Pracovní zkušenosti <img id="experiences_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#experiences_content').is(':hidden')){$('#experiences_content').hide('slow');$('#experiences_arrow').removeClass('rotated');}else{$('#experiences_content').show('slow');$('#experiences_arrow').addClass('rotated');}"></H1>
+            <div id="experiences_content" style="display: none;">
+                 <div class="row">
+                      <div class="col-sm-5">
+                          <H6 style="color: #33ff00">WERNHERD TECHNOLOGY</H6>
+                          <H7>Dětkovice</H7>
+                          <ul>
+                              <li>Oprava akumulátorů</li>
+                              <li>Programování aplikací pro Android</li>
+                              <li>Programování Arduina</li>
+                          </ul>
+                      </div>
+                      <div class="col-sm-4" style="text-align: center;">
+                        <p>2022 - současnost</p>
+                      </div>
+
+                      <div class="col-sm-5">
+                      <H6 style="color: #33ff00">OBEC SMRŽICE</H6>
+                          <H7>Smržice</H7>
+                          <ul>
+                              <li>Sečení trávy</li>
+                              <li>Zahradnické práce</li>
+                          </ul>
+                      </div>
+                      <div class="col-sm-4" style="text-align: center;">
+                        <p>2019, 2020, 2021, 2022</p>
+                      </div>
 
 
-    </section>
 
-           <div class="col-sm-16" id="programming">
-              <H1>xxx</H1>
+                 </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                      <H6 style="color: #33ff00">ARBOEKO</H6>
+                          <H7>Smržice</H7>
+                          <ul>
+                              <li>Zahradnické práce</li>
+                          </ul>
+                      </div>
+                      <div class="col-sm-4" style="text-align: center;">
+                        <p>2018</p>
+                      </div>
+                </div>
+            </div>
+      </div>
+    <hr class="featurette-divider">
+<div class="col-sm-16" id="skills" style="margin-top: 50px; margin-bottom: 20px;">
+    <H1 style="color: #ff0000;">Dovedosti <img id="skills_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#skills_content').is(':hidden')){$('#skills_content').hide('slow');$('#skills_arrow').removeClass('rotated');}else{$('#skills_content').show('slow');$('#skills_arrow').addClass('rotated');}"></H1>
+
+    <div id="skills_content" style="display: none;">
+    <p>Jazyky, knihovny, technologie, ostatní</p>
+    <div class="container">
+        <div class="row" style="padding-bottom: 50px;">
+          <div class="col-sm-2">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" data-toggle="list" href="#list-python" role="tab" aria-controls="home">Python</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-web" role="tab" aria-controls="profile">Weby</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-android" role="tab" aria-controls="messages">Android</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-mcu" role="tab" aria-controls="messages">Elektro</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-others" role="tab" aria-controls="settings">Ostatní</a>
+            </div>
           </div>
 
-    <div class="col-sm-16" id="skills">
-        <H1>Dovedosti</H1>
+
+          <div class="col-sm-8" style="width: 70%;">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-python" role="tabpanel" aria-labelledby="list-home-list">
+                  Můj nejoblíbenější jazyk 😂<ul>
+                      <li>Django</li>
+                      <li>Flask</li>
+                      <li>PyQt</li>
+                      <li>Tkinter</li>
+                      <li>Kivi</li>
+                      <li>OpenCV</li>
+                  </ul>
+              </div>
+              <div class="tab-pane fade" id="list-web" role="tabpanel" aria-labelledby="list-profile-list">
+                  <ul>
+                      <li>Python (Django, flask)</li>
+                      <li>Javascript (jQuery)</li>
+                      <li>CSS (Bootstrap)</li>
+                      <li>SQL databáze</li>
+                  </ul>
+              </div>
+              <div class="tab-pane fade" id="list-android" role="tabpanel" aria-labelledby="list-messages-list">Vývoj aplikací (nejíc Java).</div>
+              <div class="tab-pane fade" id="list-mcu" role="tabpanel" aria-labelledby="list-messages-list">Raspberry PI, Arduino, STM, ...</div>
+              <div class="tab-pane fade" id="list-others" role="tabpanel" aria-labelledby="list-settings-list">Znám také
+                  <ul>
+                      <li>Microsoft Office</li>
+                      <li>Linux <i>Používám Ubuntu</i></li>
+                      <li>Git</li>
+                      <li>Úprava fotek v Gimpu</li>
+                      <li>Střih videa v HitFilmu</li>
+                  </ul>
+                  </div>
+            </div>
+          </div>
+            </div>
+        </div>
+</div>
+
+
     </div>
-     <div class="col-sm-16" id="projects">
-         <H1></H1>
-     </div>
+      </div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
 
-  </div>
+        <script>
+            const fotka = document.querySelector('#photo');
+            const kontakt = document.querySelector('#contact');
+            const title = document.querySelector('#title');
+            const welcome = document.querySelector('#welcome');
+            const socials = document.querySelector('#socials');
+
+            const tl = new TimelineMax();
+
+            tl.fromTo(title, 1, {opacity:0, y:"200"}, {opacity:1, y:"0", ease:Power2.easeInOut})
+            .fromTo(welcome, 1, {opacity:0, y:"200"},  {opacity:1, y:"0", ease:Power2.easeInOut})
+            .fromTo(kontakt, 1, {opacity:0, y:"200"}, {opacity:1, y:"0", ease:Power2.easeInOut})
+            .fromTo(fotka, 1, {opacity:0, y:"200"}, {opacity:1, y:"0", ease:Power2.easeInOut})
+            .fromTo(socials, 1, {opacity:0, y:"200"}, {opacity:1, y:"0", ease:Power2.easeInOut});
+
+
+            $('#list-tab a').on('click', function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            })
+  </script>
 </body>
 </html>

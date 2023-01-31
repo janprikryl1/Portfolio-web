@@ -19,7 +19,7 @@
 <body>
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-4">
-        <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none">
+        <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none" id="header">
             <H4>Jan</H4>
         </a>
       <ul class="nav nav-pills">
@@ -100,6 +100,15 @@
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
         $('#github_icon').attr("src","media/icon/github-mark.svg");
     }
+    function on_resize() {
+        if ($(this).width() < 400 || $(this).height() < 350) {
+            $('#header').hide();
+        }
+    }
+    on_resize();
+    $(window).resize(function() {
+        on_resize();
+    });
   </script>
   <style>
     .mfp-with-zoom .mfp-container,

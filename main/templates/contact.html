@@ -16,7 +16,7 @@
 <body>
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
-       <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none">
+       <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none" id="header">
            <H4>Jan</H4>
        </a>
       <ul class="nav nav-pills">
@@ -133,6 +133,15 @@
        })
     });
   });
+    function on_resize() {
+        if ($(this).width() < 400 || $(this).height() < 350) {
+            $('#header').hide();
+        }
+    }
+    on_resize();
+    $(window).resize(function() {
+        on_resize();
+    });
   </script>
 
  <div class="modal fade" tabindex="-1" role="dialog" id="modalInitial">

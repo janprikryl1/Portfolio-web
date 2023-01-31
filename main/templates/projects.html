@@ -16,7 +16,7 @@
 <body>
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-4">
-     <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none">
+     <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none" id="header">
         <H4>Jan</H4>
      </a>
       <ul class="nav nav-pills">
@@ -100,6 +100,16 @@
     tl.fromTo(webs, 1, {opacity:0, y:"200"}, {opacity:1, y:"0", ease:Power2.easeInOut})
       .fromTo(apps, 1, {opacity:0, y:"200"},  {opacity:1, y:"0", ease:Power2.easeInOut})
       .fromTo(others, 1, {opacity:0, y:"200"}, {opacity:1, y:"0", ease:Power2.easeInOut});
+
+    function on_resize() {
+        if ($(this).width() < 400 || $(this).height() < 350) {
+            $('#header').hide();
+        }
+    }
+    on_resize();
+    $(window).resize(function() {
+        on_resize();
+    });
   </script>
 </body>
 </html>

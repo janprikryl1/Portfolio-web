@@ -27,8 +27,8 @@ def project_details(request):
 
 # Chyby stránky
 def handler404(request, *args, **argv):  # Stránka nenalezena
-    pass  # return render(request, "error.html", {'code': 404})
+    return render(request, "error.html", {'code': 404})
 
 
 def handler500(request, *args, **argv):  # Jiná chyba
-    pass  # return render(request, "error.html", {'code': 500})
+    return render(request, "error.html", {'code': 500})

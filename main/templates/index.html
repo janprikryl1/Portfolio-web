@@ -16,7 +16,7 @@
 <body>
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-4">
-      <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none">
+      <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none" id="header">
         <H4>Jan</H4>
       </a>
       <ul class="nav nav-pills">
@@ -30,12 +30,12 @@
             <hr style="margin-top: 1px; color: gray;">
   </div>
 
-  <div class="container" id="overview">
-      <div class="row" style="margin: 30px; padding-top: 5px;">
+  <div class="container" id="overview" style="padding-left: 15px;">
+      <div class="row" style="padding-top: 5px;">
           <div class="col-sm-8">
               <H1 style="color: #ff0000;" id="title">Ahoj,</H1>
               <H1 id="welcome">Jmenuji se Jan Přikryl</H1>
-              <a href="{% url 'contact' %}" class="btn btn-outline-primary" style="margin-top: 40px;" id="contact">Napište mi</a>
+              <a href="{% url 'contact' %}" class="btn btn-outline-primary" style="margin-top: 5px;" id="contact">Napište mi</a>
               <div class="row" style="bottom: 0; height: 10%; position: absolute;" id="socials">
                       <div class="col-sm-1 cards" style="margin-right: 20px;">
                           <a href="mailto:honza.prikryl.hp@gmail.com"><img src="media/icon/013-mail.svg"></a>
@@ -61,18 +61,18 @@
               </div>
           </div>
           <div class="col-sm-4">
-              <img id="photo" src="media/icon/IMG_20210522_162420.jpg" style="width: 300px; padding-top: 20px;">
+              <img id="photo" src="media/icon/img2.png" style="width: 300px; padding-top: 20px;">
           </div>
       </div>
   </div>
   <br>
   <div class="container">
       <!--About-->
-      <div class="row" style="bottom: 0; height: 0px; position: absolute; margin-left: 30px; margin-top: 100px;">
+      <div class="row" style="bottom: 0; height: 0px; position: absolute; margin-top: 100px;">
           <div class="col-sm-16" id="about">
               <H1>Vítám tě na svém webu,</H1>
                 <br>
-              <h3>Jsem student, programátor a rád se učím novým věcem.</h3>
+              <h3 style="padding-right:60px;">Jsem student, programátor a rád se učím novým věcem.</h3>
             <hr class="featurette-divider">
             <H1 style="margin-top: 50px; margin-bottom: 20px; color: #ff0000">Vzdělání  <img id="education_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#education_content').is(':hidden')){$('#education_content').hide('slow');$('#education_arrow').removeClass('rotated');}else{$('#education_content').show('slow');$('#education_arrow').addClass('rotated');}"></H1>
               <div id="education_content" style="display: none;">
@@ -224,6 +224,11 @@
                     $('.cards').hide();
                 } else {
                     $('.cards').show();
+                }
+                if ($(this).width() < 400 || $(this).height() < 350) {
+                    $('#about').css({"margin-top":"200px"});
+                    $('#header').hide();
+                    $('#socials').hide();
                 }
             }
             on_resize();

@@ -20,9 +20,7 @@
         <H4>Jan</H4>
       </a>
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="{% url 'index' %}" class="nav-link active">Portfolio</a></li>
-        <li class="nav-item"><a href="{% url 'index' %}#about" class="nav-link">O mně</a></li>
-        <li class="nav-item"><a href="{% url 'index' %}#skills" class="nav-link">Dovednosti</a></li>
+        <li class="nav-item" style="border-bottom: 2px solid #0073ff; padding-bottom: 1px;"><a href="{% url 'index' %}" class="nav-link">Portfolio</a></li>
         <li class="nav-item"><a href="{% url 'projects' %}" class="nav-link">Projekty</a></li>
         <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Kontakt</a></li>
       </ul>
@@ -33,11 +31,11 @@
   <div class="container" id="overview" style="padding-left: 15px;">
       <div class="row" style="padding-top: 5px;">
           <div class="col-sm-8">
-              <H1 style="color: #ff0000;" id="title">Ahoj,</H1>
+              <H1 style="color: #0073ff;" id="title">Ahoj,</H1>
               <H1 id="welcome">Jmenuji se Jan Přikryl</H1>
               <a href="{% url 'contact' %}" class="btn btn-outline-primary" style="margin-top: 5px;" id="contact">Napište mi</a>
               <div class="row" style="bottom: 0; height: 10%; position: absolute;" id="socials">
-                      <div class="col-sm-1 cards" style="margin-right: 20px;">
+                      <div class="col-sm-1 cards" style="margin-right: 20px; margin-left: 10px;">
                           <a href="mailto:honza.prikryl.hp@gmail.com"><img src="media/icon/013-mail.svg"></a>
                       </div>
                       <div class="col-sm-1 cards" style="margin-right: 20px;">
@@ -74,39 +72,39 @@
                 <br>
               <h3 style="padding-right:60px;">Jsem student, programátor a rád se učím novým věcem.</h3>
             <hr class="featurette-divider">
-            <H1 style="margin-top: 50px; margin-bottom: 20px; color: #ff0000">Vzdělání  <img id="education_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#education_content').is(':hidden')){$('#education_content').hide('slow');$('#education_arrow').removeClass('rotated');}else{$('#education_content').show('slow');$('#education_arrow').addClass('rotated');}"></H1>
+            <H1 style="margin-top: 50px; margin-bottom: 20px; color: #0073ff">Vzdělání  <img id="education_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#education_content').is(':hidden')){$('#education_content').hide('slow');$('#education_arrow').removeClass('rotated');}else{$('#education_content').show('slow');$('#education_arrow').addClass('rotated');}"></H1>
               <div id="education_content" style="display: none;">
                     <div class="row">
                       <div class="col-sm-5">
-                          <H6 style="color: #33ff00">VYSOKÁ ŠKOLA BÁŇSKÁ -</H6>
-                          <H6 style="color: #33ff00">TECHNICKÁ UNIVERZITA OSTRAVA</H6>
+                          <H6 style="color: #0073ff">VYSOKÁ ŠKOLA BÁŇSKÁ -</H6>
+                          <H6 style="color: #0073ff">TECHNICKÁ UNIVERZITA OSTRAVA</H6>
                           <H7>Ostrava</H7>
-                          <p style="color: #0073ff;">Informatika</p>
+                          <p>Informatika</p>
                       </div>
                       <div class="col-sm-4" style="text-align: center;">
                         <p>2022 - současnost</p>
                       </div>
                       <div class="col-sm-5">
-                        <H6 style="color: #33ff00">VYŠŠÍ ODBORNÁ ŠKOLA</H6>
-                        <H6 style="color: #33ff00">A STŘENÍ PRŮMYSLOVÁ ŠKOLA</H6>
-                        <H6 style="color: #33ff00">ELEKTROTECHNICKÁ</H6>
+                        <H6 style="color: #0073ff">VYŠŠÍ ODBORNÁ ŠKOLA</H6>
+                        <H6 style="color: #0073ff">A STŘENÍ PRŮMYSLOVÁ ŠKOLA</H6>
+                        <H6 style="color: #0073ff">ELEKTROTECHNICKÁ</H6>
                         <H7>Olomouc</H7>
-                        <p style="color: #0073ff;">Elektrotechnika</p>
+                        <p>Elektrotechnika</p>
                       </div>
                       <div class="col-sm-4" style="text-align: center;">
                         <p>2018 - 2022</p>
                       </div>
                     </div>
-                        <H6 style="color: #33ff00">ZÁKLADNÍ ŠKOLA E. VALENY</H6>
+                        <H6 style="color: #0073ff">ZÁKLADNÍ ŠKOLA E. VALENY</H6>
                         <H7>Prostějov</H7>
                 </div>
 
     <hr class="featurette-divider">
-            <H1 style="margin-top: 50px; margin-bottom: 20px; color: #ff0000">Pracovní zkušenosti <img id="experiences_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#experiences_content').is(':hidden')){$('#experiences_content').hide('slow');$('#experiences_arrow').removeClass('rotated');}else{$('#experiences_content').show('slow');$('#experiences_arrow').addClass('rotated');}"></H1>
+            <H1 style="margin-top: 50px; margin-bottom: 20px; color: #0073ff">Pracovní zkušenosti <img id="experiences_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#experiences_content').is(':hidden')){$('#experiences_content').hide('slow');$('#experiences_arrow').removeClass('rotated');}else{$('#experiences_content').show('slow');$('#experiences_arrow').addClass('rotated');}"></H1>
             <div id="experiences_content" style="display: none;">
                  <div class="row">
                       <div class="col-sm-5">
-                          <H6 style="color: #33ff00">WERNHERD TECHNOLOGY</H6>
+                          <H6 style="color: #0073ff">WERNHERD TECHNOLOGY</H6>
                           <H7>Dětkovice</H7>
                           <ul>
                               <li>Oprava akumulátorů</li>
@@ -118,7 +116,7 @@
                         <p>2022 - současnost</p>
                       </div>
                       <div class="col-sm-5">
-                      <H6 style="color: #33ff00">OBEC SMRŽICE</H6>
+                      <H6 style="color: #0073ff">OBEC SMRŽICE</H6>
                           <H7>Smržice</H7>
                           <ul>
                               <li>Sečení trávy</li>
@@ -131,7 +129,7 @@
                  </div>
                 <div class="row">
                     <div class="col-sm-5">
-                      <H6 style="color: #33ff00">ARBOEKO</H6>
+                      <H6 style="color: #0073ff">ARBOEKO</H6>
                           <H7>Smržice</H7>
                           <ul>
                               <li>Zahradnické práce</li>
@@ -145,7 +143,7 @@
       </div>
     <hr class="featurette-divider">
 <div class="col-sm-16" id="skills" style="margin-top: 50px; margin-bottom: 20px;">
-    <H1 style="color: #ff0000;">Dovedosti <img id="skills_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#skills_content').is(':hidden')){$('#skills_content').hide('slow');$('#skills_arrow').removeClass('rotated');}else{$('#skills_content').show('slow');$('#skills_arrow').addClass('rotated');}"></H1>
+    <H1 style="color: #0073ff;">Dovedosti <img id="skills_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#skills_content').is(':hidden')){$('#skills_content').hide('slow');$('#skills_arrow').removeClass('rotated');}else{$('#skills_content').show('slow');$('#skills_arrow').addClass('rotated');}"></H1>
     <div id="skills_content" style="display: none;">
     <p>Jazyky, knihovny, technologie, ostatní</p>
     <div class="container">

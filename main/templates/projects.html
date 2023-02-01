@@ -21,9 +21,7 @@
      </a>
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Portfolio</a></li>
-        <li class="nav-item"><a href="{% url 'index' %}#about" class="nav-link">O mně</a></li>
-        <li class="nav-item"><a href="{% url 'index' %}#skills" class="nav-link">Dovednosti</a></li>
-        <li class="nav-item"><a href="{% url 'projects' %}" class="nav-link active">Projekty</a></li>
+        <li class="nav-item" style="border-bottom: 2px solid #0073ff; padding-bottom: 1px;"><a href="{% url 'projects' %}" class="nav-link">Projekty</a></li>
         <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Kontakt</a></li>
       </ul>
     </header>
@@ -31,14 +29,14 @@
   </div>
 
   <div class="container" id="webs">
-    <H1 style="color: #ff0000;">Weby</H1>
+    <H1 style="color: #0073ff;">Weby</H1>
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5" style="margin-top: -15px; margin-left: 0.1%;">
       {% for p in webs %}
          <div class="col">
-                  <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg d-flex flex-column h-100 p-5 pb-3 text-shadow-1" style="background-image: url({{ p.icon.url }});">
-                       <a href="{% url 'project_details' %}?project_id={{ p.id }}" class="no_underline">
+                  <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg d-flex flex-column h-100 p-5 pb-3 text-shadow-1" style="background-image: url({{ p.icon.url }}); background-repeat: no-repeat;">
+                       <a href="{% url 'project_details' %}?project_id={{ p.id }}" style="text-decoration: none;">
                             <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ p.name }}</h2>
-                            <p style="color: white;">{{ p.description }}</p>
+                            <p style="color: white;">{{ p.purpose }}</p>
                        </a>
                   </div>
               </div>
@@ -48,14 +46,14 @@
     </div>
 
     <div class="container" id="apps">
-        <H1 style="color: #ff0000;">Aplikace</H1>
+        <H1 style="color: #0073ff;">Aplikace</H1>
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5" style="margin-top: -15px; margin-left: 0.1%;">
             {% for p in apps %}
               <div class="col">
-                  <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg d-flex flex-column h-100 p-5 pb-3 text-shadow-1" style="background-image: url({{ p.icon.url }});">
-                       <a href="{% url 'project_details' %}?project_id={{ p.id }}" class="no_underline">
+                  <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg d-flex flex-column h-100 p-5 pb-3 text-shadow-1" style="background-image: url({{ p.icon.url }}); background-repeat: no-repeat;">
+                       <a href="{% url 'project_details' %}?project_id={{ p.id }}" style="text-decoration: none;">
                             <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ p.name }}</h2>
-                            <p style="color: white;">{{ p.description }}</p>
+                            <p style="color: white;">{{ p.purpose }}</p>
                        </a>
                   </div>
               </div>
@@ -65,15 +63,15 @@
     </div>
 
      <div class="container" id="others">
-       <H1 style="color: #ff0000;">Ostatní <img id="other_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#other_content').is(':hidden')){$('#other_content').hide('slow');$('#other_arrow').removeClass('rotated');}else{$('#other_content').show('slow');$('#other_arrow').addClass('rotated');}"></H1>
+       <H1 style="color: #0073ff;">Ostatní <img id="other_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#other_content').is(':hidden')){$('#other_content').hide('slow');$('#other_arrow').removeClass('rotated');}else{$('#other_content').show('slow');$('#other_arrow').addClass('rotated');}"></H1>
          <div id="other_content" style="display: none;">
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5" style="margin-top: -15px; margin-left: 0.1%;">
                 {% for p in others %}
                   <div class="col">
-                      <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg d-flex flex-column h-100 p-5 pb-3 text-shadow-1" style="background-image: url({{ p.icon.url }});">
-                           <a href="{% url 'project_details' %}?project_id={{ p.id }}" class="no_underline">
+                      <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg d-flex flex-column h-100 p-5 pb-3 text-shadow-1" style="background-image: url({{ p.icon.url }}); background-repeat: no-repeat;">
+                           <a href="{% url 'project_details' %}?project_id={{ p.id }}" style="text-decoration: none;">
                                 <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ p.name }}</h2>
-                                <p style="color: white;">{{ p.description }}</p>
+                                <p style="color: white;">{{ p.purpose }}</p>
                            </a>
                       </div>
                   </div>

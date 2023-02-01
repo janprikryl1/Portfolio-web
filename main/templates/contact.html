@@ -21,10 +21,8 @@
        </a>
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="{% url 'index' %}" class="nav-link" aria-current="page">Portfolio</a></li>
-        <li class="nav-item"><a href="{% url 'index' %}#about" class="nav-link">O mně</a></li>
-        <li class="nav-item"><a href="{% url 'index' %}#skills" class="nav-link">Dovednosti</a></li>
         <li class="nav-item"><a href="{% url 'projects' %}" class="nav-link">Projekty</a></li>
-        <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link active">Kontakt</a></li>
+        <li class="nav-item"  style="border-bottom: 2px solid #0073ff; padding-bottom: 1px;"><a href="{% url 'contact' %}" class="nav-link">Kontakt</a></li>
       </ul>
     </header>
       <hr style="margin-top: 1px; color: gray;">
@@ -93,7 +91,7 @@
                   <textarea id="message" style="margin-left: -10px; border-radius: 10px; padding: 10px;" required></textarea>
                 </div>
               </div>
-              <input type="submit" class="btn btn-outline-danger" value="Odeslat">
+              <input type="submit" class="btn btn-outline-primary" value="Odeslat">
               <div class="col-sm-8">
                 <br><br>
                 <p>Můžete mně také kontaktovat e-mailem, telefonicky, přes Signal, WhatsApp, Telegram, Viber, Messenger, Instagram, FaceTime a nebo Discord</p>

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{% static 'hover.css' %}" type="text/css">
 </head>
 <body>
+{% load i18n %}
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-4">
       <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none" id="header">
@@ -21,8 +22,8 @@
       </a>
       <ul class="nav nav-pills">
         <li class="nav-item" style="border-bottom: 2px solid #0073ff; padding-bottom: 1px;"><a href="{% url 'index' %}" class="nav-link">Portfolio</a></li>
-        <li class="nav-item"><a href="{% url 'projects' %}" class="nav-link">Projekty</a></li>
-        <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Kontakt</a></li>
+        <li class="nav-item"><a href="{% url 'projects' %}" class="nav-link">{% trans 'projects' %}</a></li>
+        <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">{% trans 'contact' %}</a></li>
       </ul>
     </header>
             <hr style="margin-top: 1px; color: gray;">
@@ -31,9 +32,9 @@
   <div class="container" id="overview" style="padding-left: 15px;">
       <div class="row" style="padding-top: 5px;">
           <div class="col-sm-8">
-              <H1 style="color: #0073ff;" id="title">Ahoj,</H1>
-              <H1 id="welcome">Jmenuji se Jan Přikryl</H1>
-              <a href="{% url 'contact' %}" class="btn btn-outline-primary" style="margin-top: 5px;" id="contact">Napište mi</a>
+              <H1 style="color: #0073ff;" id="title">{% trans 'hi' %},</H1>
+              <H1 id="welcome">{% trans 'my_name_is' %} Jan Přikryl</H1>
+              <a href="{% url 'contact' %}" class="btn btn-outline-primary" style="margin-top: 5px;" id="contact">{% trans 'text_me' %}</a>
               <div class="row" style="bottom: 0; height: 10%; position: absolute;" id="socials">
                       <div class="col-sm-1 cards" style="margin-right: 20px; margin-left: 10px;">
                           <a href="mailto:honza.prikryl.hp@gmail.com"><img src="media/icon/013-mail.svg"></a>
@@ -68,28 +69,28 @@
       <!--About-->
       <div class="row" style="bottom: 0; height: 0px; position: absolute; margin-top: 100px;">
           <div class="col-sm-16" id="about">
-              <H1>Vítám tě na svém webu,</H1>
+              <H1>{% trans 'welcome_to_this_web' %},</H1>
                 <br>
-              <h3 style="padding-right:60px;">Jsem student, programátor a rád se učím novým věcem.</h3>
+              <h3 style="padding-right:60px;">{% trans 'short_dectiption' %}.</h3>
             <hr class="featurette-divider">
-            <H1 style="margin-top: 50px; margin-bottom: 20px; color: #0073ff">Vzdělání  <img id="education_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#education_content').is(':hidden')){$('#education_content').hide('slow');$('#education_arrow').removeClass('rotated');}else{$('#education_content').show('slow');$('#education_arrow').addClass('rotated');}"></H1>
+            <H1 style="margin-top: 50px; margin-bottom: 20px; color: #0073ff">{% trans 'education' %}  <img id="education_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#education_content').is(':hidden')){$('#education_content').hide('slow');$('#education_arrow').removeClass('rotated');}else{$('#education_content').show('slow');$('#education_arrow').addClass('rotated');}"></H1>
               <div id="education_content" style="display: none;">
                     <div class="row">
                       <div class="col-sm-5">
                           <H6 style="color: #0073ff">VYSOKÁ ŠKOLA BÁŇSKÁ -</H6>
-                          <H6 style="color: #0073ff">TECHNICKÁ UNIVERZITA OSTRAVA</H6>
+                          <H6 style="color: #0073ff">{% trans 'technical_university_of' %} OSTRAVA</H6>
                           <H7>Ostrava</H7>
-                          <p>Informatika</p>
+                          <p>{% trans 'informatics' %}</p>
                       </div>
                       <div class="col-sm-4" style="text-align: center;">
-                        <p>2022 - současnost</p>
+                        <p>2022 - {% trans 'present' %}</p>
                       </div>
                       <div class="col-sm-5">
                         <H6 style="color: #0073ff">VYŠŠÍ ODBORNÁ ŠKOLA</H6>
                         <H6 style="color: #0073ff">A STŘENÍ PRŮMYSLOVÁ ŠKOLA</H6>
                         <H6 style="color: #0073ff">ELEKTROTECHNICKÁ</H6>
                         <H7>Olomouc</H7>
-                        <p>Elektrotechnika</p>
+                        <p>{% trans 'electrotechnics' %}</p>
                       </div>
                       <div class="col-sm-4" style="text-align: center;">
                         <p>2018 - 2022</p>
@@ -100,27 +101,27 @@
                 </div>
 
     <hr class="featurette-divider">
-            <H1 style="margin-top: 50px; margin-bottom: 20px; color: #0073ff">Pracovní zkušenosti <img id="experiences_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#experiences_content').is(':hidden')){$('#experiences_content').hide('slow');$('#experiences_arrow').removeClass('rotated');}else{$('#experiences_content').show('slow');$('#experiences_arrow').addClass('rotated');}"></H1>
+            <H1 style="margin-top: 50px; margin-bottom: 20px; color: #0073ff">{% trans 'work_experiences' %} <img id="experiences_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#experiences_content').is(':hidden')){$('#experiences_content').hide('slow');$('#experiences_arrow').removeClass('rotated');}else{$('#experiences_content').show('slow');$('#experiences_arrow').addClass('rotated');}"></H1>
             <div id="experiences_content" style="display: none;">
                  <div class="row">
                       <div class="col-sm-5">
                           <H6 style="color: #0073ff">WERNHERD TECHNOLOGY</H6>
                           <H7>Dětkovice</H7>
                           <ul>
-                              <li>Oprava akumulátorů</li>
-                              <li>Programování aplikací pro Android</li>
-                              <li>Programování Arduina</li>
+                              <li>{% trans 'repair_of_accumulators' %}</li>
+                              <li>{% trans 'programming_applications_for' %} Android</li>
+                              <li>{% trans 'programming_of_arduino' %}</li>
                           </ul>
                       </div>
                       <div class="col-sm-4" style="text-align: center;">
-                        <p>2022 - současnost</p>
+                        <p>2022 - {% trans 'present' %}</p>
                       </div>
                       <div class="col-sm-5">
                       <H6 style="color: #0073ff">OBEC SMRŽICE</H6>
                           <H7>Smržice</H7>
                           <ul>
-                              <li>Sečení trávy</li>
-                              <li>Zahradnické práce</li>
+                              <li>{% trans 'grass_cutting' %}</li>
+                              <li>{% trans 'garden_jobs' %}</li>
                           </ul>
                       </div>
                       <div class="col-sm-4" style="text-align: center;">
@@ -132,7 +133,7 @@
                       <H6 style="color: #0073ff">ARBOEKO</H6>
                           <H7>Smržice</H7>
                           <ul>
-                              <li>Zahradnické práce</li>
+                              <li>{% trans 'garden_jobs' %}</li>
                           </ul>
                       </div>
                       <div class="col-sm-4" style="text-align: center;">
@@ -143,24 +144,24 @@
       </div>
     <hr class="featurette-divider">
 <div class="col-sm-16" id="skills" style="margin-top: 50px; margin-bottom: 20px;">
-    <H1 style="color: #0073ff;">Dovedosti <img id="skills_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#skills_content').is(':hidden')){$('#skills_content').hide('slow');$('#skills_arrow').removeClass('rotated');}else{$('#skills_content').show('slow');$('#skills_arrow').addClass('rotated');}"></H1>
+    <H1 style="color: #0073ff;">{% trans 'skills' %} <img id="skills_arrow" class="arrow" src="media/icon/expand-arrow-icon.svg" onclick="if (!$('#skills_content').is(':hidden')){$('#skills_content').hide('slow');$('#skills_arrow').removeClass('rotated');}else{$('#skills_content').show('slow');$('#skills_arrow').addClass('rotated');}"></H1>
     <div id="skills_content" style="display: none;">
-    <p>Jazyky, knihovny, technologie, ostatní</p>
+    <p>{% trans 'languages' %}, {% trans 'libraries' %}, {% trans 'technologies' %}, {% trans 'others' %}</p>
     <div class="container">
         <div class="row" style="padding-bottom: 50px;">
           <div class="col-sm-2">
             <div class="list-group" id="list-tab" role="tablist">
               <a class="list-group-item list-group-item-action active" data-toggle="list" href="#list-python" role="tab" aria-controls="home">Python</a>
-              <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-web" role="tab" aria-controls="profile">Weby</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-web" role="tab" aria-controls="profile">{% trans 'webs' %}</a>
               <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-android" role="tab" aria-controls="messages">Android</a>
-              <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-mcu" role="tab" aria-controls="messages">Elektro</a>
-              <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-others" role="tab" aria-controls="settings">Ostatní</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-mcu" role="tab" aria-controls="messages">{% trans 'electro' %}</a>
+              <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-others" role="tab" aria-controls="settings">{% trans 'others' %}</a>
             </div>
           </div>
           <div class="col-sm-8" style="width: 70%;">
             <div class="tab-content" id="nav-tabContent">
               <div class="tab-pane fade show active" id="list-python" role="tabpanel" aria-labelledby="list-home-list">
-                  Můj nejoblíbenější jazyk 😂<ul>
+                  {% trans 'my' %} {% trans 'most_favourite' %} {% trans 'languages' %} 😂<ul>
                       <li>Django</li>
                       <li>Flask</li>
                       <li>PyQt</li>
@@ -177,15 +178,15 @@
                       <li>SQL databáze</li>
                   </ul>
               </div>
-              <div class="tab-pane fade" id="list-android" role="tabpanel" aria-labelledby="list-messages-list">Vývoj aplikací (nejíc Java).</div>
+              <div class="tab-pane fade" id="list-android" role="tabpanel" aria-labelledby="list-messages-list">{% trans 'application_development' %} ({% trans 'most' %} Java).</div>
               <div class="tab-pane fade" id="list-mcu" role="tabpanel" aria-labelledby="list-messages-list">Raspberry PI, Arduino, STM, ...</div>
-              <div class="tab-pane fade" id="list-others" role="tabpanel" aria-labelledby="list-settings-list">Znám také
+              <div class="tab-pane fade" id="list-others" role="tabpanel" aria-labelledby="list-settings-list">
                   <ul>
                       <li>Microsoft Office</li>
-                      <li>Linux <i>Používám Ubuntu</i></li>
+                      <li>Linux <i>{% trans 'i_use' %} Ubuntu</i></li>
                       <li>Git</li>
-                      <li>Úprava fotek v Gimpu</li>
-                      <li>Střih videa v HitFilmu</li>
+                      <li>{% trans 'photo_editing_in_gimp' %}</li>
+                      <li>{% trans 'video_editing_in_hitfilm' %}</li>
                   </ul>
                   </div>
             </div>
@@ -194,6 +195,17 @@
        </div>
       </div>
      </div>
+          <footer class="container" style="padding-bottom: 20px;">
+            <p class="float-end"><a href="#">{% trans 'up' %}</a></p>
+            <p>Jan Přikryl, 2023</p>
+
+            {% get_current_language as LANGUAGE_CODE %}
+            {% if LANGUAGE_CODE == 'cs' %}
+                <a class="btn btn-outline-primary" href="/en{{ request.get_full_path|slice:'3:' }}" role="button">{% trans "English" %}</a>
+            {% else %}
+                <a class="btn btn-outline-primary" href="/cs{{ request.get_full_path|slice:'3:' }}" role="button">{% trans "Czech" %}</a>
+            {% endif %}
+          </footer>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
@@ -234,5 +246,6 @@
                 on_resize();
             });
   </script>
+
 </body>
 </html>

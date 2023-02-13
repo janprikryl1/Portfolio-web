@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-13 14:37+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\main\templates\contact.html:9 .\main\templates\index.html:37
+msgid "text_me"
+msgstr "Text me"
+
+#: .\main\templates\contact.html:25 .\main\templates\error.html:25
+#: .\main\templates\index.html:25 .\main\templates\project_details.html:28
+#: .\main\templates\projects.html:25
+msgid "projects"
+msgstr "Projects"
+
+#: .\main\templates\contact.html:26 .\main\templates\error.html:26
+#: .\main\templates\index.html:26 .\main\templates\project_details.html:29
+#: .\main\templates\projects.html:26
+msgid "contact"
+msgstr "Contact"
+
+#: .\main\templates\contact.html:57
+msgid "send_a_message"
+msgstr "Send me message"
+
+#: .\main\templates\contact.html:61 .\main\templates\index.html:36
+msgid "my_name_is"
+msgstr "My name is"
+
+#: .\main\templates\contact.html:64 .\main\templates\contact.html:65
+msgid "name"
+msgstr "Name"
+
+#: .\main\templates\contact.html:70
+msgid "my_email_is"
+msgstr "My email is"
+
+#: .\main\templates\contact.html:71
+msgid "email_purpose"
+msgstr "Email is used for our communication"
+
+#: .\main\templates\contact.html:80
+msgid "subject_of_message"
+msgstr "Subjects of this message is"
+
+#: .\main\templates\contact.html:83 .\main\templates\contact.html:84
+msgid "subject"
+msgstr "Subject"
+
+#: .\main\templates\contact.html:89
+msgid "message"
+msgstr "Message"
+
+#: .\main\templates\contact.html:98
+msgid "you_can_contact_me_via"
+msgstr "You can contact me via"
+
+#: .\main\templates\contact.html:98
+msgid "and_or"
+msgstr "and or"
+
+#: .\main\templates\contact.html:99
+msgid "phone"
+msgstr "Phone"
+
+#: .\main\templates\contact.html:150
+msgid "sent"
+msgstr "Sent"
+
+#: .\main\templates\contact.html:154
+msgid "thank_you"
+msgstr "Thank you"
+
+#: .\main\templates\contact.html:155
+msgid "message_has_been_sent"
+msgstr "Message has been sent"
+
+#: .\main\templates\contact.html:160
+msgid "looking_forward_to_comunicate_with_you"
+msgstr "I am looking forward to our communication"
+
+#: .\main\templates\contact.html:161
+msgid "i_wil_answer_asap"
+msgstr "I will answer as soon as possible"
+
+#: .\main\templates\contact.html:164
+msgid "well"
+msgstr "Wll"
+
+#: .\main\templates\contact.html:164
+msgid "close"
+msgstr "close"
+
+#: .\main\templates\contact.html:171 .\main\templates\projects.html:86
+msgid "up"
+msgstr "Up"
+
+#: .\main\templates\error.html:9 .\main\templates\error.html:37
+msgid "error"
+msgstr "Error"
+
+#: .\main\templates\error.html:33
+msgid "page_not_found_sorry"
+msgstr "Page not found"
+
+#: .\main\templates\error.html:34 .\main\templates\error.html:38
+msgid "you_can_go_to"
+msgstr "You can go to"
+
+#: .\main\templates\error.html:34 .\main\templates\error.html:38
+msgid "main_site"
+msgstr "index site"
+
+#: .\main\templates\error.html:35 .\main\templates\error.html:39
+msgid "code_of_error"
+msgstr "Code of error"
+
+#: .\main\templates\error.html:37
+msgid "we_are_sorry"
+msgstr "We are sorry"
+
+#: .\main\templates\index.html:35
+msgid "hi"
+msgstr "Hi"
+
+#: .\main\templates\index.html:72
+msgid "welcome_to_this_web"
+msgstr "Welcome to my web"
+
+#: .\main\templates\index.html:74
+msgid "short_dectiption"
+msgstr "I am a student, programmer and I like to learn new things"
+
+#: .\main\templates\index.html:76
+msgid "education"
+msgstr "Education"
+
+#: .\main\templates\index.html:81
+msgid "technical_university_of"
+msgstr "TECHNICAL UNIVERSITY OF"
+
+#: .\main\templates\index.html:83
+msgid "informatics"
+msgstr "Informatics"
+
+#: .\main\templates\index.html:86 .\main\templates\index.html:117
+#, fuzzy
+#| msgid "sent"
+msgid "present"
+msgstr "Sent"
+
+#: .\main\templates\index.html:93
+msgid "electrotechnics"
+msgstr "Electrotechnics"
+
+#: .\main\templates\index.html:104
+msgid "work_experiences"
+msgstr "Work experience"
+
+#: .\main\templates\index.html:111
+msgid "repair_of_accumulators"
+msgstr "Repair of accumulators"
+
+#: .\main\templates\index.html:112
+msgid "programming_applications_for"
+msgstr "Programming applications for"
+
+#: .\main\templates\index.html:113
+msgid "programming_of_arduino"
+msgstr "Programming of Arduino"
+
+#: .\main\templates\index.html:123
+msgid "grass_cutting"
+msgstr "Grass cutting"
+
+#: .\main\templates\index.html:124 .\main\templates\index.html:136
+msgid "garden_jobs"
+msgstr "Garden jobs"
+
+#: .\main\templates\index.html:147
+msgid "skills"
+msgstr "Skills"
+
+#: .\main\templates\index.html:149 .\main\templates\index.html:164
+msgid "languages"
+msgstr "Languages"
+
+#: .\main\templates\index.html:149
+msgid "libraries"
+msgstr "libraries"
+
+#: .\main\templates\index.html:149
+msgid "technologies"
+msgstr "technologies"
+
+#: .\main\templates\index.html:149 .\main\templates\index.html:158
+#: .\main\templates\projects.html:67
+msgid "others"
+msgstr "Others"
+
+#: .\main\templates\index.html:155 .\main\templates\projects.html:33
+msgid "webs"
+msgstr "Webs"
+
+#: .\main\templates\index.html:157
+msgid "electro"
+msgstr "Electro"
+
+#: .\main\templates\index.html:164
+msgid "my"
+msgstr "My"
+
+#: .\main\templates\index.html:164
+msgid "most_favourite"
+msgstr "the most favourite"
+
+#: .\main\templates\index.html:181
+msgid "application_development"
+msgstr "Application development"
+
+#: .\main\templates\index.html:181
+msgid "most"
+msgstr "most"
+
+#: .\main\templates\index.html:186
+msgid "i_use"
+msgstr "I use"
+
+#: .\main\templates\index.html:188
+msgid "photo_editing_in_gimp"
+msgstr "Editing images in Gimp"
+
+#: .\main\templates\index.html:189
+msgid "video_editing_in_hitfilm"
+msgstr "Video editing in Hitfilm"
+
+#: .\main\templates\project_details.html:39
+msgid "description"
+msgstr "Description"
+
+#: .\main\templates\project_details.html:42
+msgid "purpose"
+msgstr "Purpose"
+
+#: .\main\templates\project_details.html:56
+msgid "repository"
+msgstr "Repository"
+
+#: .\main\templates\projects.html:50
+msgid "applications"
+msgstr "Applications"
+
+#: .\portfolio_web\settings.py:26
+msgid "English"
+msgstr "English"
+
+#: .\portfolio_web\settings.py:27
+msgid "Czech"
+msgstr "Česky"

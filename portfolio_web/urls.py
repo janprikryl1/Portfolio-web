@@ -20,14 +20,15 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 from django.views.static import serve
 
-urlpatterns = [
+from django.conf.urls.i18n import i18n_patterns
+
+urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),  # Odkaz na stránku admin, kde je přístup ke všem datům
     path('', include("main.url")),  # Odkaz na hlavní aplikaci
 
     # Odkaz na soubory
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     re_path(r'^favicon\.ico$', RedirectView.as_view(url='/media/icon/icon.svg')),
-
-]
+)
 handler404 = 'main.views.handler404'
 handler500 = 'main.views.handler500'

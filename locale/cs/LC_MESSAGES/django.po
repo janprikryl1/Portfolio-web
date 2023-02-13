@@ -1,0 +1,275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-13 14:37+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: .\main\templates\contact.html:9 .\main\templates\index.html:37
+msgid "text_me"
+msgstr "Napište mi"
+
+#: .\main\templates\contact.html:25 .\main\templates\error.html:25
+#: .\main\templates\index.html:25 .\main\templates\project_details.html:28
+#: .\main\templates\projects.html:25
+msgid "projects"
+msgstr "Projekty"
+
+#: .\main\templates\contact.html:26 .\main\templates\error.html:26
+#: .\main\templates\index.html:26 .\main\templates\project_details.html:29
+#: .\main\templates\projects.html:26
+msgid "contact"
+msgstr "Kontakt"
+
+#: .\main\templates\contact.html:57
+msgid "send_a_message"
+msgstr "Zanechte mi vzkaz"
+
+#: .\main\templates\contact.html:61 .\main\templates\index.html:36
+msgid "my_name_is"
+msgstr "Moje jméno je"
+
+#: .\main\templates\contact.html:64 .\main\templates\contact.html:65
+msgid "name"
+msgstr "Jméno"
+
+#: .\main\templates\contact.html:70
+msgid "my_email_is"
+msgstr "Můj email je"
+
+#: .\main\templates\contact.html:71
+msgid "email_purpose"
+msgstr "Email slouží k případné komunikaci"
+
+#: .\main\templates\contact.html:80
+msgid "subject_of_message"
+msgstr "Předmětem zprávy je"
+
+#: .\main\templates\contact.html:83 .\main\templates\contact.html:84
+msgid "subject"
+msgstr "Předmět"
+
+#: .\main\templates\contact.html:89
+msgid "message"
+msgstr "Zpráva"
+
+#: .\main\templates\contact.html:98
+msgid "you_can_contact_me_via"
+msgstr "Můžete mně také kontaktovat přes"
+
+#: .\main\templates\contact.html:98
+msgid "and_or"
+msgstr "a nebo"
+
+#: .\main\templates\contact.html:99
+msgid "phone"
+msgstr "Telefon"
+
+#: .\main\templates\contact.html:150
+msgid "sent"
+msgstr "Odesláno"
+
+#: .\main\templates\contact.html:154
+msgid "thank_you"
+msgstr "Děkuji"
+
+#: .\main\templates\contact.html:155
+msgid "message_has_been_sent"
+msgstr "Zpráva byla odeslána"
+
+#: .\main\templates\contact.html:160
+msgid "looking_forward_to_comunicate_with_you"
+msgstr "Těším se na komunikaci s vámí"
+
+#: .\main\templates\contact.html:161
+msgid "i_wil_answer_asap"
+msgstr "Určitě odpovím co nejdříve"
+
+#: .\main\templates\contact.html:164
+msgid "well"
+msgstr "Dobře"
+
+#: .\main\templates\contact.html:164
+msgid "close"
+msgstr "zavřít"
+
+#: .\main\templates\contact.html:171 .\main\templates\projects.html:86
+msgid "up"
+msgstr "Nahoru"
+
+#: .\main\templates\error.html:9 .\main\templates\error.html:37
+msgid "error"
+msgstr "Chyba"
+
+#: .\main\templates\error.html:33
+msgid "page_not_found_sorry"
+msgstr "Stránka nenalezena"
+
+#: .\main\templates\error.html:34 .\main\templates\error.html:38
+msgid "you_can_go_to"
+msgstr "Můžete přejít na"
+
+#: .\main\templates\error.html:34 .\main\templates\error.html:38
+msgid "main_site"
+msgstr "hlavní stránku"
+
+#: .\main\templates\error.html:35 .\main\templates\error.html:39
+msgid "code_of_error"
+msgstr "Kód chyby"
+
+#: .\main\templates\error.html:37
+msgid "we_are_sorry"
+msgstr "omlouváme se"
+
+#: .\main\templates\index.html:35
+msgid "hi"
+msgstr "Ahoj"
+
+#: .\main\templates\index.html:72
+msgid "welcome_to_this_web"
+msgstr "Vítám tě na svém webu"
+
+#: .\main\templates\index.html:74
+msgid "short_dectiption"
+msgstr "Jsem student, programátor a rád se učím novým věcem"
+
+#: .\main\templates\index.html:76
+msgid "education"
+msgstr "Vzdělání"
+
+#: .\main\templates\index.html:81
+msgid "technical_university_of"
+msgstr "TECHNICKÁ UNIVERZITA"
+
+#: .\main\templates\index.html:83
+msgid "informatics"
+msgstr "Informatika"
+
+#: .\main\templates\index.html:86 .\main\templates\index.html:117
+#, fuzzy
+#| msgid "sent"
+msgid "present"
+msgstr "Odesláno"
+
+#: .\main\templates\index.html:93
+msgid "electrotechnics"
+msgstr "Elektrotechnika"
+
+#: .\main\templates\index.html:104
+msgid "work_experiences"
+msgstr "Pracovní zkušenosti"
+
+#: .\main\templates\index.html:111
+msgid "repair_of_accumulators"
+msgstr "Oprava akumulátorů"
+
+#: .\main\templates\index.html:112
+msgid "programming_applications_for"
+msgstr "Programování aplikací pro"
+
+#: .\main\templates\index.html:113
+msgid "programming_of_arduino"
+msgstr "Programování Arduina"
+
+#: .\main\templates\index.html:123
+msgid "grass_cutting"
+msgstr "Sečení trávy"
+
+#: .\main\templates\index.html:124 .\main\templates\index.html:136
+msgid "garden_jobs"
+msgstr "Zahradnické práce"
+
+#: .\main\templates\index.html:147
+msgid "skills"
+msgstr "Dovednosti"
+
+#: .\main\templates\index.html:149 .\main\templates\index.html:164
+msgid "languages"
+msgstr "Jazyky"
+
+#: .\main\templates\index.html:149
+msgid "libraries"
+msgstr "knihovny"
+
+#: .\main\templates\index.html:149
+msgid "technologies"
+msgstr "technologie"
+
+#: .\main\templates\index.html:149 .\main\templates\index.html:158
+#: .\main\templates\projects.html:67
+msgid "others"
+msgstr "Ostatní"
+
+#: .\main\templates\index.html:155 .\main\templates\projects.html:33
+msgid "webs"
+msgstr "Weby"
+
+#: .\main\templates\index.html:157
+msgid "electro"
+msgstr "Elektro"
+
+#: .\main\templates\index.html:164
+msgid "my"
+msgstr "můj"
+
+#: .\main\templates\index.html:164
+msgid "most_favourite"
+msgstr "nejoblíbenější"
+
+#: .\main\templates\index.html:181
+msgid "application_development"
+msgstr "Vývoj aplikací"
+
+#: .\main\templates\index.html:181
+msgid "most"
+msgstr "nejvíc"
+
+#: .\main\templates\index.html:186
+msgid "i_use"
+msgstr "používám"
+
+#: .\main\templates\index.html:188
+msgid "photo_editing_in_gimp"
+msgstr "Úprava obrázků v Gimpu"
+
+#: .\main\templates\index.html:189
+msgid "video_editing_in_hitfilm"
+msgstr "Úprava videa v Hitfilmu"
+
+#: .\main\templates\project_details.html:39
+msgid "description"
+msgstr "Popis"
+
+#: .\main\templates\project_details.html:42
+msgid "purpose"
+msgstr "Účel"
+
+#: .\main\templates\project_details.html:56
+msgid "repository"
+msgstr "Repozitář"
+
+#: .\main\templates\projects.html:50
+msgid "applications"
+msgstr "Aplikace"
+
+#: .\portfolio_web\settings.py:26
+msgid "English"
+msgstr "English"
+
+#: .\portfolio_web\settings.py:27
+msgid "Czech"
+msgstr "Česky"

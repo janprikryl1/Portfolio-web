@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+from importlib.resources._common import _
 from pathlib import Path
 import os
 
@@ -17,6 +17,15 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = 'media/'
+
+LOCALE_PATHS = [
+   os.path.join(BASE_DIR, 'locale')
+]
+
+LANGUAGES = (
+   ('en', _('English')),
+   ('cs', _('Czech')),
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -27,8 +36,8 @@ SECRET_KEY = 'django-insecure-nh((if))(5n2ip_op-iu_y4d(2jl!snt!+o=7l!#b1!%8ondo=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['principle-wallpaper-knife-remind.trycloudflare.com', '4204-2a00-1028-9942-5abe-1423-b528-97b2-5164.eu.ngrok.io', '127.0.0.1']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
@@ -46,6 +55,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',

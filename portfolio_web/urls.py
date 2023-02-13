@@ -24,7 +24,7 @@ from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),  # Odkaz na stránku admin, kde je přístup ke všem datům
-    path('', include("main.url")),  # Odkaz na hlavní aplikaci
+    re_path(r'^', include("main.url")),  # Odkaz na hlavní aplikaci
 
     # Odkaz na soubory
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
@@ -32,3 +32,24 @@ urlpatterns = i18n_patterns(
 )
 handler404 = 'main.views.handler404'
 handler500 = 'main.views.handler500'
+
+
+
+
+"""
+V Django 3.8
+
+urlpatterns = [
+    url(r'^', include("main.url"))
+] + i18n_patterns(
+    path('admin/', admin.site.urls),  # Odkaz na stránku admin, kde je přístup ke všem datům
+    url(r'^', include("main.url")),  # Odkaz na hlavní aplikaci
+
+    # Odkaz na soubory
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    url(r'^favicon\.ico$',RedirectView.as_view(url='/media/icon/icon.svg')),
+
+)
+handler404 = 'main.views.handler404'
+handler500 = 'main.views.handler500'
+"""

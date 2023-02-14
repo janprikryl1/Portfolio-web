@@ -36,5 +36,9 @@ class Project(models.Model):
     repository = models.CharField(max_length=100)
     date_time = models.DateTimeField(auto_now=True)
 
+    name_en = models.CharField(max_length=20, default="")
+    description_en = models.TextField(default="")
+    purpose_en = models.TextField(default="")
+
     def __str__(self):
         return self.name

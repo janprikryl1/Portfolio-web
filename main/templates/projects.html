@@ -1,4 +1,6 @@
 <!doctype html>
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <html lang="cs">
   <head>
     <meta charset="utf-8">
@@ -15,7 +17,6 @@
     <link rel="stylesheet" href="{% static 'hover.css' %}" type="text/css">
 </head>
 <body>
-{% load i18n %}
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-4">
      <a href="{% url 'index' %}" class="align-items-center me-md-auto text-dark text-decoration-none" id="header">
@@ -37,8 +38,8 @@
          <div class="col">
                   <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg d-flex flex-column h-100 p-5 pb-3 text-shadow-1" style="background-image: url({{ p.icon.url }}); background-repeat: no-repeat;">
                        <a href="{% url 'project_details' %}?project_id={{ p.id }}" style="text-decoration: none;">
-                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ p.name }}</h2>
-                            <p style="color: white;">{{ p.purpose }}</p>
+                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{% if LANGUAGE_CODE == 'cs' %}{{ p.name }}{% else %}{{ p.name_en }}{% endif %}</h2>
+                            <p style="color: white;">{% if LANGUAGE_CODE == 'cs' %}{{ p.purpose }}{% else %}{{ p.purpose_en }}{% endif %}</p>
                        </a>
                   </div>
               </div>
@@ -54,8 +55,8 @@
               <div class="col">
                   <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg d-flex flex-column h-100 p-5 pb-3 text-shadow-1" style="background-image: url({{ p.icon.url }}); background-repeat: no-repeat;">
                        <a href="{% url 'project_details' %}?project_id={{ p.id }}" style="text-decoration: none;">
-                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ p.name }}</h2>
-                            <p style="color: white;">{{ p.purpose }}</p>
+                            <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{% if LANGUAGE_CODE == 'cs' %}{{ p.name }}{% else %}{{ p.name_en }}{% endif %}</h2>
+                            <p style="color: white;">{% if LANGUAGE_CODE == 'cs' %}{{ p.purpose }}{% else %}{{ p.purpose_en }}{% endif %}</p>
                        </a>
                   </div>
               </div>
@@ -72,8 +73,8 @@
                   <div class="col">
                       <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg d-flex flex-column h-100 p-5 pb-3 text-shadow-1" style="background-image: url({{ p.icon.url }}); background-repeat: no-repeat;">
                            <a href="{% url 'project_details' %}?project_id={{ p.id }}" style="text-decoration: none;">
-                                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ p.name }}</h2>
-                                <p style="color: white;">{{ p.purpose }}</p>
+                                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{% if LANGUAGE_CODE == 'cs' %}{{ p.name }}{% else %}{{ p.name_en }}{% endif %}</h2>
+                                <p style="color: white;">{% if LANGUAGE_CODE == 'cs' %}{{ p.purpose }}{% else %}{{ p.purpose_en }}{% endif %}</p>
                            </a>
                       </div>
                   </div>
@@ -87,7 +88,6 @@
     <p class="float-end"><a href="#">{% trans 'up' %}</a></p>
     <p>Jan Přikryl, 2023</p>
 
-    {% get_current_language as LANGUAGE_CODE %}
     {% if LANGUAGE_CODE == 'cs' %}
         <a class="btn btn-outline-primary" href="/en{{ request.get_full_path|slice:'3:' }}" role="button">{% trans "English" %}</a>
     {% else %}

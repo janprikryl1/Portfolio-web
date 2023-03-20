@@ -159,10 +159,8 @@ msgid "informatics"
 msgstr "Informatics"
 
 #: .\main\templates\index.html:86 .\main\templates\index.html:117
-#, fuzzy
-#| msgid "sent"
 msgid "present"
-msgstr "Sent"
+msgstr "present"
 
 #: .\main\templates\index.html:93
 msgid "electrotechnics"
@@ -246,8 +244,12 @@ msgid "photo_editing_in_gimp"
 msgstr "Editing images in Gimp"
 
 #: .\main\templates\index.html:189
-msgid "video_editing_in_hitfilm"
-msgstr "Video editing in Hitfilm"
+msgid "video_editing"
+msgstr "Video editing"
+
+#: .\main\templates\index.html:179
+msgid "database"
+msgstr "database"
 
 #: .\main\templates\project_details.html:39
 msgid "description"

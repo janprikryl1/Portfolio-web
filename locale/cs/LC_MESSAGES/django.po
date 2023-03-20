@@ -160,10 +160,8 @@ msgid "informatics"
 msgstr "Informatika"
 
 #: .\main\templates\index.html:86 .\main\templates\index.html:117
-#, fuzzy
-#| msgid "sent"
 msgid "present"
-msgstr "Odesláno"
+msgstr "současnost"
 
 #: .\main\templates\index.html:93
 msgid "electrotechnics"
@@ -247,8 +245,12 @@ msgid "photo_editing_in_gimp"
 msgstr "Úprava obrázků v Gimpu"
 
 #: .\main\templates\index.html:189
-msgid "video_editing_in_hitfilm"
-msgstr "Úprava videa v Hitfilmu"
+msgid "video_editing"
+msgstr "Úprava, střih videa"
+
+#: .\main\templates\index.html:179
+msgid "database"
+msgstr "databáze"
 
 #: .\main\templates\project_details.html:39
 msgid "description"
